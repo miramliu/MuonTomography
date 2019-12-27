@@ -162,7 +162,7 @@ def SAPixels(xC,zC,SR):
 def SRSinogramSpace(i,j,X,Y,theta,dx,dy,dz):
     theta = theta*np.pi/180 #translation to theta in radians
     if dx == 0:
-        psi = np.pi/2 - theta #directly forward in detector system
+        psi = np.pi/2 + theta #directly forward in detector system
     else:
         psi = math.atan(dz/dx)
         if psi<=0:
@@ -174,3 +174,24 @@ def SRSinogramSpace(i,j,X,Y,theta,dx,dy,dz):
     z = 0 #in pyramid space, with j = 0
     xi0 = x*math.cos(phi)+y*math.sin(phi)
     return phi, xi0, psi, x, y
+
+#calculates sinogram space for one location XY of the detector
+def OneSinogramSpace(i,j,X,Y,theta):
+    phis = []
+    xis = []
+    psis = []
+    x1s = []
+    y1s = []
+    for Hpix in i: #for all 480 pixels along the x axis
+        for H in i: #for every pixel on the second detector x axis
+            # for every combination of pixels
+            di = Hpix-H #horizontal relative displacement (in cm)
+            dj = 0 #zero vertical relative displacement
+            Vpix = 0#by default
+            phi_n, xi0_n,psi,x1,y1 = SRSinogramSpace(Hpix, Vpix,X,Y, theta,di,dj,200)
+            phis.append(phi_n)
+            xis.append(xi0_n)
+            psis.append(psi)
+            x1s.append(x1)
+            y1s.append(y1)
+    return phis,xis,psis,x1s,y1s
