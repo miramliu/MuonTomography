@@ -1,4 +1,4 @@
-# functions used in Geometric Trajectory and Detector Placement
+# functions used in Geometric Trajectory and Detector Placement - Mira 
 #generally in order of use in notebooks
 import numpy as np
 import math
@@ -167,15 +167,15 @@ def SRSinogramSpace(i,j,X,Y,theta,dx,dy,dz):
         psi = math.atan(dz/dx)
         if psi<=0:
             psi = math.atan(dz/dx)+np.pi
-        psi = psi- theta
+        psi = psi+ theta
     phi = psi-(np.pi/2)
     x = (i-(960/2))/100 + X # in pyramid space
     y = Y # in pyramid space
     z = 0 #in pyramid space, with j = 0
     xi0 = x*math.cos(phi)+y*math.sin(phi)
+    if phi<0:
+        phi = phi + np.pi
     return phi, xi0, psi, x, y
-
-#calculates sinogram space for one location XY of the detector
 def OneSinogramSpace(i,j,X,Y,theta):
     phis = []
     xis = []
