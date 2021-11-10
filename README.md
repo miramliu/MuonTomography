@@ -2,7 +2,7 @@
 Patrick Rotation Autumn 2019
 Muon Tomography
 
-In this repository are the papers, presentations, figures and code used and written for Autumn 2019 research rotation in MPHY 41800 Research in Advanced Tomographic Imaging.
+In this repository are the papers, presentations, figures and code used and written for Autumn 2019 research rotation in MPHY 41800 Research in Advanced Tomographic Imaging available here: https://github.com/miramliu/MuonTomography/blob/master/MuonTomography_Autumn2019.pdf
 
 Figures.pptx contains the notated diagrams developed for the rotation report. 
 
