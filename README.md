@@ -1,6 +1,6 @@
 # MuonTomography
-Patrick Rotation Autumn 2019
-Graduate Program in Medical Physics
+Patrick La Riviere Rotation Autumn 2019
+PhD Program in Medical Physics
 University of Chicago
 
 Muon Tomography
