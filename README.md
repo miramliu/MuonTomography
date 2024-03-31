@@ -6,7 +6,7 @@ University of Chicago
 Muon Tomography: 
 
 
-In this repository are the papers, presentations, figures and code used and written for Autumn 2019 research rotation in MPHY 41800 Research in Advanced Tomographic Imaging available here: https://github.com/miramliu/MuonTomography/blob/master/MuonTomography_Autumn2019.pdf, and on arxiv here: https://doi.org/10.48550/arXiv.2402.17909
+In this repository are the papers, presentations, figures and code used and written for Autumn 2019 research rotation in MPHY 41800 Research in Advanced Tomographic Imaging available on arxiv here: https://doi.org/10.48550/arXiv.2402.17909
 
 The published paper regarding muon tomography of the pyramids of Giza using this work is available here: 
 https://arxiv.org/abs/2202.08184
